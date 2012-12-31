@@ -23,3 +23,11 @@ Product.create(title: 'Pivoines2',
 	image_url: 'cs.jpg',
 	price: 30.20)
 # ...
+Product.create(title: 'Pivoines3',
+	description:
+		%{<p>
+			ccc
+		</p>},
+	image_url: 'cs.jpg',
+	price: 40.20)
+# ...

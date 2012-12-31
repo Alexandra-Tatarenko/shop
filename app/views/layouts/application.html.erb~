@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Store</title>
+  <title>Cross</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller.controller_name %>">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <div id="cart">
+        <%= render @cart %>  
+      </div>
 
-<%= yield %>
+      <ul>
+	<li><a href="http://www....">Home</a></li>
+	<li><a href="http://www....">Questions</a></li>
+	<li><a href="http://www....">News</a></li>
+	<li><a href="http://www....">Contact</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+</div>
 
 </body>
 </html>
