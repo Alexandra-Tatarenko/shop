@@ -29,12 +29,12 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to product_path(assigns(:product))
   end
-=begin
+
   test "should show product" do
     get :show, id: @product
     assert_response :success
   end
-=end
+
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
@@ -52,4 +52,11 @@ class ProductsControllerTest < ActionController::TestCase
 
     assert_redirected_to products_path
   end
+
+  test "head" do
+    assert_select "head" do
+      assert_select "head", 1
+    end
+  end
+
 end

@@ -13,15 +13,14 @@
  */
 
 #banner {
-	background: #9c9;
+	background: #fff;
 	padding: 10px;
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
-	color: #282;
+	color: #006633;
 	text-align: center;
 
 	img {
-	    float: left; 
 	    }
 }
 
@@ -35,18 +34,19 @@
 }
 
 #columns {
-	background: #141;
+	/*background: #141;*/
 
 	#main {
 	      margin-left: 17em;
 	      padding: 1em;
 	      background: white;
+              width: 800px;
 	      }
 	#side {
 	      float: left;
 	      padding: 1em 2em;
 	      width: 13em;
-	      background: #141;
+	      background: #003333;
 
               form, div {
                 display: inline;

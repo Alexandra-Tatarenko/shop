@@ -9,24 +9,27 @@
 <body class="<%= controller.controller_name %>">
   <div id="banner">
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
+    <%= @page_title || "Store" %>
   </div>
   <div id="columns">
     <div id="side">
-      <div id="cart">
-        <%= render @cart %>  
-      </div>
-
       <ul>
 	<li><a href="http://www....">Home</a></li>
 	<li><a href="http://www....">Questions</a></li>
 	<li><a href="http://www....">News</a></li>
 	<li><a href="http://www....">Contact</a></li>
       </ul>
+      <%= "!!!" %>
+      <%= @time_and_data %>
+      <%= "!!!" %>
+      <div id="cart">
+        <%= render @cart if @cart.present? %>  
+      </div>
     </div>
     <div id="main">
       <%= yield %>
     </div>
+
 </div>
 
 </body>
